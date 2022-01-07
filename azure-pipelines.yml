@@ -9,6 +9,10 @@ resources:
 stages:
 - stage: Validate
   jobs:
+    pool:
+     name: Default
+     demands:
+      - agent.name -equals jaya1    
   - job: Validate
     continueOnError: false
     steps:
