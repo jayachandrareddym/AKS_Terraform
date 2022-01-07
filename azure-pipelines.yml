@@ -61,6 +61,8 @@ stages:
           #   artifact: terraform_out
           - task: charleszipp.azure-pipelines-tasks-terraform.azure-pipelines-tasks-terraform-cli.TerraformCLI@0
             displayName: 'terraform init'
+          - script: |
+              terraform init -reconfigure
             inputs:
               command: init 
               workingDirectory: $(System.DefaultWorkingDirectory)
