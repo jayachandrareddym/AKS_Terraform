@@ -41,7 +41,11 @@ stages:
     # track deployments on the environment
   - deployment: Deploy_Terraform
     pool:
-      vmImage: 'ubuntu-latest'
+      name: Default
+      demands:
+       - agent.name -equals jaya1 
+    #pool:
+      #vmImage: 'ubuntu-latest'
     # creates an environment if it doesn’t exist
     environment: 'DEV'
     strategy:
