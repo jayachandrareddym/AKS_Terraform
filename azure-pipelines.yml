@@ -26,7 +26,7 @@ stages:
       displayName: 'terraform init'
       inputs:
         command: init
-        workingDirectory: 1-terraform
+        workingDirectory: $(System.DefaultWorkingDirectory)
         backendType: azurerm
         backendServiceArm: 'AKSTerraform'
         backendAzureRmResourceGroupName: 'AKSTerraform-RG'
@@ -37,7 +37,7 @@ stages:
       displayName: 'terraform validate'
       inputs:
         command: validate
-        workingDirectory: 1-terraform
+        workingDirectory: $(System.DefaultWorkingDirectory)
  
 
 - stage: Deploy
