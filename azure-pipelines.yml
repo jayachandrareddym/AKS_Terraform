@@ -16,8 +16,8 @@ stages:
   - job: Validate
     continueOnError: false
     steps:
-    - publish: 1-terraform
-      artifact: terraform_out
+    #- publish: 1-terraform
+      #artifact: terraform_out
     - task: charleszipp.azure-pipelines-tasks-terraform.azure-pipelines-tasks-terraform-installer.TerraformInstaller@0
       displayName: 'Use Terraform v0.12.6'
       inputs:
