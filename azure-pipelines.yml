@@ -36,7 +36,7 @@ stages:
         workingDirectory: 1-terraform
  
 
-#- stage: Deploy
+- stage: Deploy
   jobs:
     # track deployments on the environment
   - deployment: Deploy_Terraform
