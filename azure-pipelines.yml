@@ -59,8 +59,6 @@ stages:
           steps:
           # - download: current
           #   artifact: terraform_out
-- script: |
-  terraform init -reconfigure
           - task: charleszipp.azure-pipelines-tasks-terraform.azure-pipelines-tasks-terraform-cli.TerraformCLI@0
             displayName: 'terraform init'
             inputs:
