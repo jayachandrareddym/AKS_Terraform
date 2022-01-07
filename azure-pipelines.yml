@@ -6,13 +6,13 @@
 resources:
 - repo: self
 
+pool:
+  name: Default
+  demands:
+   - agent.name -equals jaya1 
 stages:
 - stage: Validate
-  jobs:
-    pool:
-     name: Default
-     demands:
-      - agent.name -equals jaya1    
+  jobs: 
   - job: Validate
     continueOnError: false
     steps:
